@@ -6,22 +6,21 @@ import '../css/styles-list.css'
 
 import  FhirDisplayData from "../fhir-display-data/fhir-display-data";
 
-// const data = JSON.parse(Data);
 
-class DischargeSummary extends Component {
-render () {
-    
+const DischargeSummary = props => {
+
+    const data = JSON.parse(props);
 return (
 <div>
 <h1>FHIR - Discharge Summary </h1>
+<div>
 
-return <div>
-<FhirDisplayData resource={ Data } />
+<FhirDisplayData resource={ data} />
 </div>
 
 </div>
 )
 }
-}
+
 
 export default DischargeSummary
